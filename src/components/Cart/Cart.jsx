@@ -14,7 +14,7 @@ const Cart = ({ cart, removeToCart }) => {
             <h2 className={cart.length === 0 ? 'red' : 'blue'}>Order Summary:{cart.length}</h2>
             <h3 className={`bold ${cart.length === 0 ? 'red' : 'orange'}`}>{cart.length === 0 ? 'Oh No' : 'WOW Great'}</h3>
             {
-                cart.length > 2 ? <span>Great Work and More Buy Shirt</span> : <span>Oh  No, More Buy!!</span>
+                cart.length > 2 ? <span className='purple'>Great Work and More Buy Shirt</span> : <span>Oh  No, More Buy!!</span>
             }
             {
                 msg
@@ -24,10 +24,10 @@ const Cart = ({ cart, removeToCart }) => {
                     <button onClick={() => removeToCart(tShirt._id)} >X</button></p>)
             }
             {
-                cart.length===3 && <p>Good Job, Keep Buy</p>
+                cart.length === 3 && <p>Good Job, Keep Buy</p>
             }
             {
-                cart.length>4 || <p> Buy 5 or More Prduct for Discount</p>
+                cart.length > 4 || <p> Buy 5 or More Prduct for Discount</p>
             }
         </div>
     );
