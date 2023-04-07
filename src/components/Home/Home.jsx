@@ -11,7 +11,7 @@ const Home = () => {
     const addToCart = (tShirt) => {
         const exixt = cart.find(ts => ts._id === tShirt._id)
         if (exixt) {
-            toast.error("Oh No,You Have Already Added This Blog", { autoClose: 2000 });
+            toast.error("Oh No,You Have Already Added This Shirt", { autoClose: 2000 });
         }
         else {
             setCart([...cart, tShirt])
